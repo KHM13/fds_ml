@@ -1,0 +1,58 @@
+from pyspark.sql.session import SparkSession
+from pyspark.sql.types import StructType
+from src.nurier.ml.common.SparkConfProperties import SparkConfProperties as sprop
+from src.nurier.ml.common.CommonProperties import CommonProperties as prop
+from multipledispatch import dispatch
+import findspark
+
+
+class SparkCommon:
+    __spark: SparkSession = None
+    __instance = None
+
+    def __init__(self):
+        SparkCommon.__instance = self
+        findspark.init()
+        self.set_spark_session()
+
+    @staticmethod
+    def getInstance():
+        if SparkCommon.__instance is None:
+            SparkCommon()
+        return SparkCommon.__instance
+
+    def set_spark_session(self):
+        key: str
+
+        self.__spark = SparkSession.builder.appName(prop.spark_app_name) \
+            .master(prop().get_spark_master()) \
+            .config("spark.jars", "file:///D://spark-sql-kafka-0-10_2.12-3.3.0.jar,file:///D://kafka-clients-2.8.1.jar,file:///D://spark-streaming-kafka-0-10-assembly_2.12-3.5.0.jar,file:///D://commons-pool2-2.12.0.jar,file:///D://spark-token-provider-kafka-0-10_2.12-3.5.0.jar") \
+            .config("spark.executor.extraClassPath",
+                    "file:///D://spark-sql-kafka-0-10_2.12-3.3.0.jar:file:///D://kafka-clients-2.8.1.jar") \
+            .config("spark.executor.extraLibrary",
+                    "file:///D://spark-sql-kafka-0-10_2.12-3.3.0.jar:file:///D://kafka-clients-2.8.1.jar") \
+            .config("spark.driver.extraClassPath",
+                    "file:///D://spark-sql-kafka-0-10_2.12-3.3.0.jar:file:///D://kafka-clients-2.8.1.jar") \
+            .getOrCreate()
+
+        for it in sprop().spark.__iter__():
+            self.__spark.conf.set(it, sprop().spark.get(it))
+
+        if prop().is_server():
+            self.__spark.conf.set("spark.local.dir", prop().get_spark_user_dir())
+            self.__spark.conf.set("spark.executor.cores", prop().get_spark_executor_cores())       # 실행기에서 사용할 코어 수
+        else:
+            self.__spark.conf.set("spark.local.dir", prop().get_spark_user_dir())
+
+    def get_spark_session(self):
+        if self.__spark is None:
+            self.set_spark_session()
+        return self.__spark
+
+    @dispatch(str)
+    def loading_csv(self, path_csv):
+        return self.get_spark_session().read.option("header", "True").option("encoding", "EUC-KR").csv(path_csv)
+
+    @dispatch(str, StructType)
+    def loading_csv(self, path_csv, struct_type):
+        return self.get_spark_session().read.option("header", "True").option("encoding", "EUC-KR").schema(struct_type).csv(path_csv)

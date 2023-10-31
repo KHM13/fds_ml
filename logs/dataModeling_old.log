@@ -1,0 +1,14 @@
+2023-01-12 10:04:49 [DataModeling_old][DEBUG] : 
+2023-01-12 10:04:49 [DataModeling_old][DEBUG] : mediaGroupName : IB
+2023-01-12 10:04:49 [DataModeling_old][DEBUG] : mediaGroupCodeArray : 091, 91
+2023-01-12 10:04:49 [DataModeling_old][DEBUG] : D:\\\\FDS_ML\\data\\IB_preprocessData.csv
+2023-01-12 10:04:49 [DataModeling_old][DEBUG] : Data shape : (402, 43)
+2023-01-12 10:04:49 [DataModeling_old][DEBUG] : 학습 데이터 분할
+2023-01-12 10:04:49 [DataModeling_old][DEBUG] : train : x - (321, 42), y - (321, 1) | test : x - (81, 42), y - (81, 1)
+2023-01-12 10:04:51 [DataModeling_old][DEBUG] : 
+2023-01-12 10:04:51 [DataModeling_old][DEBUG] : mediaGroupName : SB
+2023-01-12 10:04:51 [DataModeling_old][DEBUG] : mediaGroupCodeArray : 021, 022, 023, 024, 21, 22, 23, 24
+2023-01-12 10:04:51 [DataModeling_old][DEBUG] : D:\\\\FDS_ML\\data\\SB_preprocessData.csv
+2023-01-12 10:04:51 [DataModeling_old][DEBUG] : Data shape : (408, 39)
+2023-01-12 10:04:51 [DataModeling_old][DEBUG] : 학습 데이터 분할
+2023-01-12 10:04:51 [DataModeling_old][DEBUG] : train : x - (326, 38), y - (326, 1) | test : x - (82, 38), y - (82, 1)

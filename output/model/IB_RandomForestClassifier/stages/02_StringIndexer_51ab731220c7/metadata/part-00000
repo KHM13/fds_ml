@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.StringIndexer","timestamp":1698209748416,"sparkVersion":"3.3.0","uid":"StringIndexer_51ab731220c7","paramMap":{"outputCol":"RMS_SVC_CIndex","handleInvalid":"keep","inputCol":"RMS_SVC_C"},"defaultParamMap":{"outputCol":"StringIndexer_51ab731220c7__output","handleInvalid":"error","stringOrderType":"frequencyDesc"}}

@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.StringIndexer","timestamp":1698209651053,"sparkVersion":"3.3.0","uid":"StringIndexer_4cef9a2c37b2","paramMap":{"handleInvalid":"keep","outputCol":"pc_OS_FIREWALL_CDIndex","inputCol":"pc_OS_FIREWALL_CD"},"defaultParamMap":{"stringOrderType":"frequencyDesc","handleInvalid":"error","outputCol":"StringIndexer_4cef9a2c37b2__output"}}

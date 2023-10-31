@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.StringIndexer","timestamp":1698209799553,"sparkVersion":"3.3.0","uid":"StringIndexer_eb6e015391e8","paramMap":{"outputCol":"pc_remoteInfo3Index","inputCol":"pc_remoteInfo3","handleInvalid":"keep"},"defaultParamMap":{"outputCol":"StringIndexer_eb6e015391e8__output","handleInvalid":"error","stringOrderType":"frequencyDesc"}}

@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.StringIndexer","timestamp":1698209798546,"sparkVersion":"3.3.0","uid":"StringIndexer_4bf7d137e1fb","paramMap":{"outputCol":"E_FNC_TR_ACNO_CIndex","handleInvalid":"keep","inputCol":"E_FNC_TR_ACNO_C"},"defaultParamMap":{"outputCol":"StringIndexer_4bf7d137e1fb__output","handleInvalid":"error","stringOrderType":"frequencyDesc"}}

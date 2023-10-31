@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.StringIndexerModel","timestamp":1698209896542,"sparkVersion":"3.3.0","uid":"StringIndexer_1c2267f8356f","paramMap":{"outputCol":"FTR_DS2Index","inputCol":"FTR_DS2","handleInvalid":"keep"},"defaultParamMap":{"stringOrderType":"frequencyDesc","outputCol":"StringIndexer_1c2267f8356f__output","handleInvalid":"error"}}

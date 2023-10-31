@@ -1,0 +1,15 @@
+pyspark~=3.3.0
+numpy~=1.24.2
+py4j~=0.10.9.5
+scipy~=1.10.0
+pandas~=1.5.3
+setuptools~=67.2.0
+multipledispatch~=0.6.0
+scikit-learn~=1.2.1
+statsmodels~=0.13.5
+findspark~=2.0.1
+aiofiles~=22.1.0
+aiocsv~=1.2.3
+aiokafka~=0.8.0
+pyarrow~=13.0.0
+PyMySQL~=1.1.0

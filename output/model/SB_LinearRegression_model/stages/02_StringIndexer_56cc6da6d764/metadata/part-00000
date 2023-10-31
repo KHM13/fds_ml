@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.StringIndexerModel","timestamp":1698209829253,"sparkVersion":"3.3.0","uid":"StringIndexer_56cc6da6d764","paramMap":{"outputCol":"E_FNC_USR_OS_DSCIndex","handleInvalid":"keep","inputCol":"E_FNC_USR_OS_DSC"},"defaultParamMap":{"outputCol":"StringIndexer_56cc6da6d764__output","handleInvalid":"error","stringOrderType":"frequencyDesc"}}

@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.StringIndexerModel","timestamp":1698209918117,"sparkVersion":"3.3.0","uid":"StringIndexer_49a3e3513fb6","paramMap":{"outputCol":"pc_isWinFirewallIndex","handleInvalid":"keep","inputCol":"pc_isWinFirewall"},"defaultParamMap":{"stringOrderType":"frequencyDesc","outputCol":"StringIndexer_49a3e3513fb6__output","handleInvalid":"error"}}

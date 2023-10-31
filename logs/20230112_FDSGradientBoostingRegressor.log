@@ -1,0 +1,98 @@
+2023-01-12 10:04:50 [FDSGradientBoostingRegressor][DEBUG] : 
+2023-01-12 10:04:50 [FDSGradientBoostingRegressor][DEBUG] : mediaGroupName : IB
+2023-01-12 10:04:50 [FDSGradientBoostingRegressor][DEBUG] : 학습데이터 분할
+2023-01-12 10:04:50 [FDSGradientBoostingRegressor][DEBUG] : train : x - (321, 42), y - (321, 1) | test : x - (81, 42), y - (81, 1)
+2023-01-12 10:04:51 [FDSGradientBoostingRegressor][DEBUG] : 
+2023-01-12 10:04:51 [FDSGradientBoostingRegressor][DEBUG] : Grid Search CV : GradientBoostingRegressor
+2023-01-12 10:04:51 [FDSGradientBoostingRegressor][DEBUG] : best parameters : {}
+2023-01-12 10:04:51 [FDSGradientBoostingRegressor][DEBUG] : best score : nan
+2023-01-12 10:04:51 [FDSGradientBoostingRegressor][DEBUG] :    mean_fit_time  std_fit_time  ...  std_test_score  rank_test_score
+0       0.061805      0.000741  ...             NaN                1
+
+[1 rows x 13 columns]
+2023-01-12 10:04:51 [FDSGradientBoostingRegressor][DEBUG] : Confusion Matrix :
+[[67  1]
+ [ 3 10]]
+2023-01-12 10:04:51 [FDSGradientBoostingRegressor][DEBUG] : Accuracy Score : 0.9506172839506173
+2023-01-12 10:04:51 [FDSGradientBoostingRegressor][DEBUG] : Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.96      0.99      0.97        68
+           1       0.91      0.77      0.83        13
+
+    accuracy                           0.95        81
+   macro avg       0.93      0.88      0.90        81
+weighted avg       0.95      0.95      0.95        81
+
+2023-01-12 10:04:51 [FDSGradientBoostingRegressor][DEBUG] : ROC AUC Score : 0.877262443438914
+2023-01-12 10:04:51 [FDSGradientBoostingRegressor][DEBUG] : 변수 중요도 Top 20 :
+pc_foresicInfo             0.266497
+pc_HdModel                 0.198157
+pc_remoteInfo1             0.113087
+EXCEPT_REGIST              0.076759
+isNewDevice                0.069766
+pc_isCertMisuse            0.055590
+RV_AC_DGN_YN2              0.036445
+pc_isWinFirewall           0.033919
+PRE_ASSIGN_YN              0.029307
+IO_EA_PW_CD_DS2            0.025916
+pc_remoteInfo2             0.022782
+SMS_AUTHEN_YN              0.021373
+pc_BwVsnCd                 0.012658
+FTR_DS2                    0.011898
+IO_EA_TM1_FTR_LMT3         0.007190
+securityMediaType          0.005403
+pc_OsLangCd                0.004188
+pc_remoteInfo3             0.002273
+EXCEPTION_ADD_AUTHEN_YN    0.002180
+RMS_SVC_C                  0.001698
+dtype: float64
+2023-01-12 10:04:52 [FDSGradientBoostingRegressor][DEBUG] : 
+2023-01-12 10:04:52 [FDSGradientBoostingRegressor][DEBUG] : mediaGroupName : SB
+2023-01-12 10:04:52 [FDSGradientBoostingRegressor][DEBUG] : 학습데이터 분할
+2023-01-12 10:04:52 [FDSGradientBoostingRegressor][DEBUG] : train : x - (326, 38), y - (326, 1) | test : x - (82, 38), y - (82, 1)
+2023-01-12 10:04:52 [FDSGradientBoostingRegressor][DEBUG] : 
+2023-01-12 10:04:52 [FDSGradientBoostingRegressor][DEBUG] : Grid Search CV : GradientBoostingRegressor
+2023-01-12 10:04:52 [FDSGradientBoostingRegressor][DEBUG] : best parameters : {}
+2023-01-12 10:04:52 [FDSGradientBoostingRegressor][DEBUG] : best score : nan
+2023-01-12 10:04:52 [FDSGradientBoostingRegressor][DEBUG] :    mean_fit_time  std_fit_time  ...  std_test_score  rank_test_score
+0       0.061199      0.000747  ...             NaN                1
+
+[1 rows x 13 columns]
+2023-01-12 10:04:52 [FDSGradientBoostingRegressor][DEBUG] : Confusion Matrix :
+[[67  1]
+ [ 6  8]]
+2023-01-12 10:04:52 [FDSGradientBoostingRegressor][DEBUG] : Accuracy Score : 0.9146341463414634
+2023-01-12 10:04:52 [FDSGradientBoostingRegressor][DEBUG] : Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.92      0.99      0.95        68
+           1       0.89      0.57      0.70        14
+
+    accuracy                           0.91        82
+   macro avg       0.90      0.78      0.82        82
+weighted avg       0.91      0.91      0.91        82
+
+2023-01-12 10:04:52 [FDSGradientBoostingRegressor][DEBUG] : ROC AUC Score : 0.7783613445378151
+2023-01-12 10:04:52 [FDSGradientBoostingRegressor][DEBUG] : 변수 중요도 Top 20 :
+sm_jailBreak               0.189417
+E_FNC_USR_DVIC_INF_CNTN    0.152835
+FTR_DS2                    0.144169
+sm_deviceModel             0.128895
+E_FNC_USR_ACS_DSC          0.100598
+sm_mobileAPSsid            0.076408
+sm_service                 0.041427
+SMS_AUTHEN_YN              0.040201
+E_FNC_USR_OS_DSC           0.039408
+PRE_ASSIGN_YN              0.021240
+doaddress                  0.013226
+sm_osVersion               0.011454
+E_FNC_LGIN_DSC             0.009873
+ATTC_DS                    0.009625
+country                    0.004703
+pc_isWinFirewall           0.004669
+workGbn                    0.003884
+IO_EA_DD1_FTR_LMT3         0.002010
+EBNK_MED_DSC               0.001289
+EXCEPT_REGIST              0.001203
+dtype: float64

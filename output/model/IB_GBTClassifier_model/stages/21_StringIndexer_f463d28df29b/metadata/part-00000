@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.StringIndexerModel","timestamp":1698209803577,"sparkVersion":"3.3.0","uid":"StringIndexer_f463d28df29b","paramMap":{"outputCol":"pc_BwVsnCdIndex","inputCol":"pc_BwVsnCd","handleInvalid":"keep"},"defaultParamMap":{"outputCol":"StringIndexer_f463d28df29b__output","handleInvalid":"error","stringOrderType":"frequencyDesc"}}

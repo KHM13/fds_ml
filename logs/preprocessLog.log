@@ -1,0 +1,1013 @@
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : Data shape : (810, 92)
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : Drop columns : TR_DTM, indexName, documentTypeName, E_FNC_MED_SVCID, E_FNC_MED_SVRNM, EXE_YN, blockingType, totalScore
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : columns drop, new shape : (810, 92)
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 데이터 확인 :
+N               654
+FRAUD            96
+ACC              27
+IMPOSSIBLE       24
+OVERLAPFRAUD      9
+Name: processState, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : label change FRAUD, OVERLAPFRAUD, ACC -> 1
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : label 값 변경 후 데이터 확인 :
+0    678
+1    132
+Name: processState, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : mediaGroupName : IB
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : mediaGroupCodeArray : 091, 91
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 채널 데이터 분리 : IB -> (402, 75)
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : columns : EBNK_MED_DSC, COPR_DS, LANG_DS, E_FNC_USR_OS_DSC, E_FNC_LGIN_DSC, NBNK_C, RMS_SVC_C, E_FNC_USR_DVIC_INF_CNTN, E_FNC_USR_ACS_DSC, E_FNC_RSP_C, Amount, E_FNC_TR_ACNO_C, IO_EA_DD1_FTR_LMT3, IO_EA_TM1_FTR_LMT3, IO_EA_PW_CD_DS1, IO_EA_PW_CD_DS2, IO_EA_PW_CD_DS3, PRE_ASSIGN_YN, SMS_AUTHEN_YN, EXCEPT_REGIST, EXCEPTION_ADD_AUTHEN_YN, SMART_AUTHEN_YN, ATTC_DS, FTR_DS2, RV_AC_DGN_YN2, IO_EA_DPZ_PL_IMP_BAC, IO_EA_TOT_BAC6, IO_EA_RMT_FEE1, securityMediaType, workType, workGbn, FDS_IDEN, country, doaddress, pc_PubIpCntryCd, pc_isProxy, pc_PrxyCntryCd, pc_isVpn, pc_VpnCntryCd, pc_FORGERY_MAC_YN, pc_FORGERY_MAC_ETH0_YN, pc_FORGERY_MAC_ETH1_YN, pc_FORGERY_MAC_ETH2_YN, pc_FORGERY_MAC_ETH3_YN, pc_FORGERY_MAC_ETH4_YN, pc_FORGERY_MAC_ETH5_YN, pc_HdModel, pc_BwVsnCd, pc_isVm, pc_vmName, pc_SCAN_CNT_DETECT, pc_SCAN_CNT_CURED, pc_os, pc_OsLangCd, pc_OsRemoteYn, pc_OS_FIREWALL_CD, pc_REMOTE_YN, pc_RemoteProg, pc_RemotePORT, pc_remoteInfo1, pc_remoteInfo2, pc_remoteInfo3, pc_remoteInfo4, pc_remoteInfo5, pc_remoteInfo6, pc_remoteInfo7, pc_remoteInfo8, pc_isWinDefender, pc_isWinFirewall, pc_isCertMisuse, processState, pc_foresicInfo, isForeigner, isNewAccount, isNewDevice
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 결측값 확인 :
+EBNK_MED_DSC          0
+COPR_DS             402
+LANG_DS               0
+E_FNC_USR_OS_DSC      0
+E_FNC_LGIN_DSC       42
+                   ... 
+processState          0
+pc_foresicInfo        0
+isForeigner           0
+isNewAccount          0
+isNewDevice           0
+Length: 75, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 결측치를 기본값으로 변경 :
+EBNK_MED_DSC        0
+COPR_DS             0
+LANG_DS             0
+E_FNC_USR_OS_DSC    0
+E_FNC_LGIN_DSC      0
+                   ..
+processState        0
+pc_foresicInfo      0
+isForeigner         0
+isNewAccount        0
+isNewDevice         0
+Length: 75, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 문자열 대문자 통일 : pc_isProxy, pc_isVpn, pc_FORGERY_MAC_YN, pc_FORGERY_MAC_ETH0_YN, pc_FORGERY_MAC_ETH1_YN, pc_FORGERY_MAC_ETH2_YN, pc_FORGERY_MAC_ETH3_YN, pc_FORGERY_MAC_ETH4_YN, pc_FORGERY_MAC_ETH5_YN, pc_isVm, pc_OsRemoteYn, pc_REMOTE_YN
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    396
+Y      6
+Name: pc_isProxy, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    258
+Y    144
+Name: pc_isVpn, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_FORGERY_MAC_YN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_FORGERY_MAC_ETH0_YN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_FORGERY_MAC_ETH1_YN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_FORGERY_MAC_ETH2_YN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_FORGERY_MAC_ETH3_YN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_FORGERY_MAC_ETH4_YN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_FORGERY_MAC_ETH5_YN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_isVm, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_OsRemoteYn, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_REMOTE_YN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 데이터 타입 변환 :
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+91    402
+Name: EBNK_MED_DSC, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+0    402
+Name: COPR_DS, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+KO    402
+Name: LANG_DS, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+1    402
+Name: E_FNC_USR_OS_DSC, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+0    321
+1     81
+Name: E_FNC_LGIN_DSC, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    300
+0    102
+Name: NBNK_C, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+EAIPROGGR0    267
+EAIPSIL0I1     54
+EAOPCA19I0     36
+EAIPROGGR1     18
+EANBCI06I0     12
+EAIPSIL0I0     12
+EAIPSIL0I2      3
+Name: RMS_SVC_C, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+PC    402
+Name: E_FNC_USR_DVIC_INF_CNTN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+5     288
+99    114
+Name: E_FNC_USR_ACS_DSC, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+0    402
+Name: E_FNC_RSP_C, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+0            333
+100000000     15
+73             9
+50000          6
+300000         3
+200000         3
+1640000        3
+32634000       3
+61000000       3
+567000         3
+85000          3
+25859860       3
+9868130        3
+19584276       3
+20544999       3
+80224391       3
+80371843       3
+Name: Amount, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N     291
+0      42
+1      15
+81     15
+4      15
+3      12
+34      6
+88      3
+20      3
+Name: E_FNC_TR_ACNO_C, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+50000     225
+0          66
+100000     54
+1000       39
+10000      18
+Name: IO_EA_DD1_FTR_LMT3, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+10000    279
+0         66
+1000      27
+2000      18
+500       12
+Name: IO_EA_TM1_FTR_LMT3, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+0    402
+Name: IO_EA_PW_CD_DS1, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+0M    111
+11    108
+N      66
+12     54
+8      42
+1       9
+0A      6
+0D      6
+Name: IO_EA_PW_CD_DS2, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+0    402
+Name: IO_EA_PW_CD_DS3, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+0    285
+1     87
+2     30
+Name: PRE_ASSIGN_YN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+0    321
+3     51
+1     30
+Name: SMS_AUTHEN_YN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+0    366
+1     36
+Name: EXCEPT_REGIST, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+0    396
+1      6
+Name: EXCEPTION_ADD_AUTHEN_YN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+0    402
+Name: SMART_AUTHEN_YN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+0    231
+6    117
+4     54
+Name: ATTC_DS, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+2    336
+0     66
+Name: FTR_DS2, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+1    336
+0     66
+Name: RV_AC_DGN_YN2, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+0            336
+400            9
+417867165      3
+151591482      3
+231963325      3
+312187716      3
+432732715      3
+332732715      3
+433908895      3
+443727025      3
+7229645        3
+433858895      3
+433685479      3
+372074479      3
+433641479      3
+433770479      3
+13469          3
+144619         3
+73903754       3
+74103754       3
+17097775       3
+Name: IO_EA_DPZ_PL_IMP_BAC, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+0            336
+400            9
+433858895      3
+151591482      3
+231963325      3
+312187716      3
+432732715      3
+332732715      3
+433908895      3
+443727025      3
+7229645        3
+433685479      3
+372074479      3
+433641479      3
+372641479      3
+433770479      3
+13469          3
+144619         3
+53903754       3
+54103754       3
+17097775       3
+Name: IO_EA_TOT_BAC6, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+0      393
+500      9
+Name: IO_EA_RMT_FEE1, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+2    285
+5    108
+1      9
+Name: securityMediaType, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+CERT    336
+N        66
+Name: workType, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+2    336
+0     66
+Name: workGbn, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: FDS_IDEN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+KR    402
+Name: country, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+11    375
+15     27
+Name: doaddress, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_PubIpCntryCd, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    396
+Y      6
+Name: pc_isProxy, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N     396
+KR      6
+Name: pc_PrxyCntryCd, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    258
+Y    144
+Name: pc_isVpn, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N     258
+KR    144
+Name: pc_VpnCntryCd, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_FORGERY_MAC_YN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_FORGERY_MAC_ETH0_YN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_FORGERY_MAC_ETH1_YN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_FORGERY_MAC_ETH2_YN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_FORGERY_MAC_ETH3_YN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_FORGERY_MAC_ETH4_YN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_FORGERY_MAC_ETH5_YN, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+Samsung SSD 860 EVO 250GB               51
+HFS256GD9TNG-62A0A                      48
+SanDisk X400 M.2 2280 128GB             36
+ADATA SP920SS                           24
+SAMSUNG MZVLQ256HAJD-000                18
+WDC WD10EZEX-00BN5A0 ATA Device         18
+Samsung SSD 750 EVO 250GB               18
+SAMSUNG MZVLB256HAHQ-00000              18
+Apacer AS330 240GB                      18
+NVMe BC511 NVMe SK hy                   18
+LITEON CV3-DE128                        18
+LITEON CV1-8B128                        12
+Apacer AS330 245GB                       9
+Apacer AS330 247GB                       9
+Apacer AS330 246GB                       9
+Apacer AS330 242GB                       9
+Apacer AS330 244GB                       9
+Apacer AS330 243GB                       9
+Apacer AS330 241GB                       9
+SAMSUNG MZVLB256HBHQ-00000               9
+ST1000LM048-2E7172                       9
+SAMSUNG MZVLB256HAHQ-000                 9
+TOSHIBA MQ01ABD100                       6
+Samsung SSD 860 EVO 250GB ATA Device     6
+ST500DM002-1BD142                        3
+Name: pc_HdModel, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+30-100-000    153
+10-011-000    114
+30-097-000     48
+70-101-000     36
+30-091-000     36
+30-101-000      9
+30-086-000      6
+Name: pc_BwVsnCd, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_isVm, dtype: int64
+2023-01-12 10:32:06 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_vmName, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    402
+Name: pc_SCAN_CNT_DETECT, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    402
+Name: pc_SCAN_CNT_CURED, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+10-010-000-10    384
+10-006-001-10     18
+Name: pc_os, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+412.0    312
+409.0     81
+804.0      9
+Name: pc_OsLangCd, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_OsRemoteYn, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+2    375
+3     27
+Name: pc_OS_FIREWALL_CD, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_REMOTE_YN, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+N             330
+TeamViewer     48
+AnyDesk        24
+Name: pc_RemoteProg, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0        330
+58666     36
+443       24
+49521      6
+59559      6
+Name: pc_RemotePORT, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+wechat.exe        138
+kakaotalk.exe     120
+N                  66
+qq.exe             45
+telegram.exe       27
+nateonmain.exe      6
+Name: pc_remoteInfo1, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+N                 231
+telegram.exe       90
+kakaotalk.exe      45
+skype.exe          24
+nateonmain.exe     12
+Name: pc_remoteInfo2, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+N                393
+kakaotalk.exe      9
+Name: pc_remoteInfo3, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_remoteInfo4, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_remoteInfo5, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_remoteInfo6, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_remoteInfo7, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+N    402
+Name: pc_remoteInfo8, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    402
+Name: pc_isWinDefender, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+1    300
+0     48
+2     36
+3     18
+Name: pc_isWinFirewall, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    132
+1     87
+2     75
+5     51
+4     30
+3     27
+Name: pc_isCertMisuse, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    330
+1     72
+Name: processState, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+1983    99
+1969    60
+1962    54
+0       48
+1963    27
+1974    24
+1968    18
+2000    18
+1967    18
+1959    12
+1999     9
+1996     9
+1956     6
+Name: pc_foresicInfo, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    402
+Name: isForeigner, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    360
+1     42
+Name: isNewAccount, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+1    240
+0    162
+Name: isNewDevice, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 데이터 변경 전 :
+KR    402
+Name: country, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 데이터 변경 후 :
+KR    402
+Name: country, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 데이터 변경 전 :
+11    375
+15     27
+Name: doaddress, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 데이터 변경 후 :
+11    375
+15     27
+Name: doaddress, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 데이터 변경 전 :
+N    402
+Name: pc_vmName, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 데이터 변경 후 :
+N    402
+Name: pc_vmName, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 단일 데이터 삭제 :
+EBNK_MED_DSC,COPR_DS,LANG_DS,E_FNC_USR_OS_DSC,E_FNC_USR_DVIC_INF_CNTN,E_FNC_RSP_C,IO_EA_PW_CD_DS1,IO_EA_PW_CD_DS3,SMART_AUTHEN_YN,FDS_IDEN,country,pc_PubIpCntryCd,pc_FORGERY_MAC_YN,pc_FORGERY_MAC_ETH0_YN,pc_FORGERY_MAC_ETH1_YN,pc_FORGERY_MAC_ETH2_YN,pc_FORGERY_MAC_ETH3_YN,pc_FORGERY_MAC_ETH4_YN,pc_FORGERY_MAC_ETH5_YN,pc_isVm,pc_vmName,pc_SCAN_CNT_DETECT,pc_SCAN_CNT_CURED,pc_OsRemoteYn,pc_REMOTE_YN,pc_remoteInfo4,pc_remoteInfo5,pc_remoteInfo6,pc_remoteInfo7,pc_remoteInfo8,pc_isWinDefender,isForeigner
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : mediaGroupName : SB
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : mediaGroupCodeArray : 021, 022, 023, 024, 21, 22, 23, 24
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 채널 데이터 분리 : SB -> (408, 49)
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : columns : EBNK_MED_DSC, COPR_DS, LANG_DS, E_FNC_USR_OS_DSC, E_FNC_LGIN_DSC, NBNK_C, RMS_SVC_C, E_FNC_USR_DVIC_INF_CNTN, E_FNC_USR_ACS_DSC, E_FNC_RSP_C, Amount, E_FNC_TR_ACNO_C, IO_EA_DD1_FTR_LMT3, IO_EA_TM1_FTR_LMT3, IO_EA_PW_CD_DS1, IO_EA_PW_CD_DS2, IO_EA_PW_CD_DS3, PRE_ASSIGN_YN, SMS_AUTHEN_YN, EXCEPT_REGIST, EXCEPTION_ADD_AUTHEN_YN, SMART_AUTHEN_YN, ATTC_DS, FTR_DS2, RV_AC_DGN_YN2, IO_EA_DPZ_PL_IMP_BAC, IO_EA_TOT_BAC6, IO_EA_RMT_FEE1, securityMediaType, workType, workGbn, FDS_IDEN, country, doaddress, pc_isWinFirewall, sm_deviceModel, sm_osVersion, sm_service, sm_locale, sm_network, sm_jailBreak, sm_roaming, sm_wifiApSsid, sm_mobileAPSsid, processState, pc_foresicInfo, isForeigner, isNewAccount, isNewDevice
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 결측값 확인 :
+EBNK_MED_DSC                 0
+COPR_DS                    384
+LANG_DS                      0
+E_FNC_USR_OS_DSC             0
+E_FNC_LGIN_DSC             144
+NBNK_C                     396
+RMS_SVC_C                    0
+E_FNC_USR_DVIC_INF_CNTN    132
+E_FNC_USR_ACS_DSC            0
+E_FNC_RSP_C                408
+Amount                       0
+E_FNC_TR_ACNO_C            282
+IO_EA_DD1_FTR_LMT3           0
+IO_EA_TM1_FTR_LMT3           0
+IO_EA_PW_CD_DS1             48
+IO_EA_PW_CD_DS2             48
+IO_EA_PW_CD_DS3            408
+PRE_ASSIGN_YN               48
+SMS_AUTHEN_YN               48
+EXCEPT_REGIST               48
+EXCEPTION_ADD_AUTHEN_YN     48
+SMART_AUTHEN_YN             48
+ATTC_DS                    276
+FTR_DS2                     48
+RV_AC_DGN_YN2               48
+IO_EA_DPZ_PL_IMP_BAC         0
+IO_EA_TOT_BAC6               0
+IO_EA_RMT_FEE1             204
+securityMediaType            0
+workType                     0
+workGbn                      0
+FDS_IDEN                   408
+country                      0
+doaddress                    0
+pc_isWinFirewall            48
+sm_deviceModel              42
+sm_osVersion                42
+sm_service                  42
+sm_locale                   42
+sm_network                  42
+sm_jailBreak                 0
+sm_roaming                 120
+sm_wifiApSsid              120
+sm_mobileAPSsid             96
+processState                 0
+pc_foresicInfo             204
+isForeigner                204
+isNewAccount               204
+isNewDevice                204
+dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 결측치를 기본값으로 변경 :
+EBNK_MED_DSC               0
+COPR_DS                    0
+LANG_DS                    0
+E_FNC_USR_OS_DSC           0
+E_FNC_LGIN_DSC             0
+NBNK_C                     0
+RMS_SVC_C                  0
+E_FNC_USR_DVIC_INF_CNTN    0
+E_FNC_USR_ACS_DSC          0
+E_FNC_RSP_C                0
+Amount                     0
+E_FNC_TR_ACNO_C            0
+IO_EA_DD1_FTR_LMT3         0
+IO_EA_TM1_FTR_LMT3         0
+IO_EA_PW_CD_DS1            0
+IO_EA_PW_CD_DS2            0
+IO_EA_PW_CD_DS3            0
+PRE_ASSIGN_YN              0
+SMS_AUTHEN_YN              0
+EXCEPT_REGIST              0
+EXCEPTION_ADD_AUTHEN_YN    0
+SMART_AUTHEN_YN            0
+ATTC_DS                    0
+FTR_DS2                    0
+RV_AC_DGN_YN2              0
+IO_EA_DPZ_PL_IMP_BAC       0
+IO_EA_TOT_BAC6             0
+IO_EA_RMT_FEE1             0
+securityMediaType          0
+workType                   0
+workGbn                    0
+FDS_IDEN                   0
+country                    0
+doaddress                  0
+pc_isWinFirewall           0
+sm_deviceModel             0
+sm_osVersion               0
+sm_service                 0
+sm_locale                  0
+sm_network                 0
+sm_jailBreak               0
+sm_roaming                 0
+sm_wifiApSsid              0
+sm_mobileAPSsid            0
+processState               0
+pc_foresicInfo             0
+isForeigner                0
+isNewAccount               0
+isNewDevice                0
+dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 문자열 대문자 통일 : sm_roaming
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+N    408
+Name: sm_roaming, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 데이터 타입 변환 :
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+21    300
+22    108
+Name: EBNK_MED_DSC, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0     384
+12     24
+Name: COPR_DS, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+KO    408
+Name: LANG_DS, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+4    300
+5     84
+2     24
+Name: E_FNC_USR_OS_DSC, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+3    204
+0    144
+1     60
+Name: E_FNC_LGIN_DSC, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0     396
+45      6
+90      6
+Name: NBNK_C, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+EAIPROGGR0    234
+EAOPCA07I0     42
+EAIPSIL0I1     42
+EAIPSIL0I0     30
+EAIPSIL1I0     24
+EAIPSIL1I1     12
+EAIPSIL1I2     12
+EAAPWO30I1      6
+EAAPWO30IA      6
+Name: RMS_SVC_C, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+N              132
+SM-G977N        42
+iPhone X        30
+LGM-G600L       30
+iPhone 7        24
+iPhone XR       24
+iPhone 13,4     24
+SM-N960N        24
+SM-G960N        18
+SM-G986N        12
+SM-G973N        12
+SM-G920S        12
+SM-F926N         6
+SM-J737S         6
+LM-V500N         6
+LGM-V300L        6
+Name: E_FNC_USR_DVIC_INF_CNTN, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+99    336
+8      72
+Name: E_FNC_USR_ACS_DSC, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    408
+Name: E_FNC_RSP_C, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0          282
+300000      12
+100000      12
+200000       6
+120000       6
+398970       6
+241930       6
+741000       6
+360000       6
+28370        6
+150000       6
+30000        6
+80000        6
+1467990      6
+1300000      6
+1468000      6
+3577000      6
+344843       6
+8134278      6
+444000       6
+Name: Amount, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0      282
+1       78
+278     18
+88      12
+4        6
+81       6
+31       6
+Name: E_FNC_TR_ACNO_C, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+50000    174
+10000    102
+1000      84
+0         48
+Name: IO_EA_DD1_FTR_LMT3, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+10000    276
+1000      84
+0         48
+Name: IO_EA_TM1_FTR_LMT3, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    408
+Name: IO_EA_PW_CD_DS1, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+11    186
+1      84
+0M     72
+N      48
+12     12
+0A      6
+Name: IO_EA_PW_CD_DS2, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    408
+Name: IO_EA_PW_CD_DS3, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    342
+2     42
+1     24
+Name: PRE_ASSIGN_YN, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    282
+3    126
+Name: SMS_AUTHEN_YN, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    348
+1     60
+Name: EXCEPT_REGIST, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    408
+Name: EXCEPTION_ADD_AUTHEN_YN, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    408
+Name: SMART_AUTHEN_YN, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    276
+6    132
+Name: ATTC_DS, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+2    348
+0     48
+1     12
+Name: FTR_DS2, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+1    360
+0     48
+Name: RV_AC_DGN_YN2, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0          288
+178393       6
+1923631      6
+2727631      6
+924701       6
+1182631      6
+2367631      6
+25237        6
+53607        6
+57893        6
+805567       6
+300225       6
+905567       6
+2550910      6
+872          6
+2205567      6
+3577872      6
+441910       6
+380225       6
+100225       6
+4796357      6
+Name: IO_EA_DPZ_PL_IMP_BAC, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0          288
+178393       6
+1923631      6
+2727631      6
+924701       6
+1182631      6
+2367631      6
+25237        6
+53607        6
+57893        6
+805567       6
+300225       6
+905567       6
+2550910      6
+872          6
+2205567      6
+3577872      6
+441910       6
+380225       6
+100225       6
+4796357      6
+Name: IO_EA_TOT_BAC6, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0      384
+500     24
+Name: IO_EA_RMT_FEE1, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+5    186
+2    138
+1     84
+Name: securityMediaType, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+CERT    360
+2        42
+6         6
+Name: workType, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+1    234
+2    144
+3     24
+7      6
+Name: workGbn, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+N    408
+Name: FDS_IDEN, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+KR     348
+ETC     60
+Name: country, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+11     312
+ETC     60
+18      18
+12      12
+14       6
+Name: doaddress, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+1    228
+2    132
+0     48
+Name: pc_isWinFirewall, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+LGM-G600L     72
+N             42
+SM-G920S      42
+SM-N960N      42
+SM-G977N      36
+iPhone13,4    18
+LM-V500N      18
+SM-J737S      18
+SM-G973N      18
+iPhone11,8    18
+iPhone9,3     18
+iPhone10,3    18
+SM-G960N      18
+LGM-V300L     12
+SM-G986N       6
+SM-F926N       6
+iPhone10,6     6
+Name: sm_deviceModel, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+10        114
+8.0.0      72
+11         48
+N          42
+14.7.1     42
+7          42
+14.4.2     24
+14.6       12
+9          12
+Name: sm_osVersion, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+LG U+        102
+SKTelecom     84
+KT            60
+N             42
+中?移?          36
+UNICOM        30
+中??通          24
+CMCC          18
+Uyou          12
+Name: sm_service, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+ko_KR    366
+N         42
+Name: sm_locale, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+WIFI        246
+MOBILE      102
+N            42
+CELLULAR     18
+Name: sm_network, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+-1    330
+0      78
+Name: sm_jailBreak, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+N    408
+Name: sm_roaming, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+<unknown ssid>           186
+N                        120
+KT_GIGA_2G_Wave2_B986     72
+SK_WiFiGIGA3478_5G        30
+Name: sm_wifiApSsid, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+LGU+            102
+N                96
+KT               60
+中?移?             36
+China Unicom     30
+中??通             24
+SK Telecom       24
+SKTelecom        18
+普泰移              18
+Name: sm_mobileAPSsid, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    348
+1     60
+Name: processState, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0       204
+1969     72
+1981     42
+1967     42
+1966     18
+1979     18
+1962     12
+Name: pc_foresicInfo, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    408
+Name: isForeigner, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    360
+1     48
+Name: isNewAccount, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 
+0    408
+Name: isNewDevice, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 데이터 변경 전 :
+KR     348
+ETC     60
+Name: country, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 데이터 변경 후 :
+KR     348
+ETC     60
+Name: country, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 데이터 변경 전 :
+11     312
+ETC     60
+18      18
+12      12
+14       6
+Name: doaddress, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 데이터 변경 후 :
+11     312
+ETC     60
+18      18
+12      12
+14       6
+Name: doaddress, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 데이터 변경 전 :
+ko_KR    366
+N         42
+Name: sm_locale, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 데이터 변경 후 :
+ko_KR    366
+N         42
+Name: sm_locale, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 스마트뱅킹 데이터 변환 : 
+KT        144
+LGT       102
+N          42
+中?移?       36
+UNICOM     30
+中??通       24
+CMCC       18
+Uyou       12
+Name: sm_service, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 스마트뱅킹 데이터 변환 : 
+LGT             102
+N                96
+KT               78
+中?移?             36
+China Unicom     30
+中??通             24
+SKT              24
+普泰移              18
+Name: sm_mobileAPSsid, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 스마트뱅킹 데이터 변환 : 
+ko_KR    366
+N         42
+Name: sm_locale, dtype: int64
+2023-01-12 10:32:07 [DataPreProcessing][DEBUG] : 단일 데이터 삭제 :
+LANG_DS,E_FNC_RSP_C,IO_EA_PW_CD_DS1,IO_EA_PW_CD_DS3,EXCEPTION_ADD_AUTHEN_YN,SMART_AUTHEN_YN,FDS_IDEN,sm_roaming,isForeigner,isNewDevice

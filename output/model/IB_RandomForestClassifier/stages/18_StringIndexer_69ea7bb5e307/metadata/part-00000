@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.StringIndexer","timestamp":1698209749107,"sparkVersion":"3.3.0","uid":"StringIndexer_69ea7bb5e307","paramMap":{"handleInvalid":"keep","outputCol":"pc_isVpnIndex","inputCol":"pc_isVpn"},"defaultParamMap":{"handleInvalid":"error","outputCol":"StringIndexer_69ea7bb5e307__output","stringOrderType":"frequencyDesc"}}

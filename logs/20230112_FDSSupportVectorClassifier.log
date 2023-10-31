@@ -1,0 +1,54 @@
+2023-01-12 10:04:51 [FDSSupportVectorClassifier][DEBUG] : 
+2023-01-12 10:04:51 [FDSSupportVectorClassifier][DEBUG] : mediaGroupName : IB
+2023-01-12 10:04:51 [FDSSupportVectorClassifier][DEBUG] : 학습데이터 분할
+2023-01-12 10:04:51 [FDSSupportVectorClassifier][DEBUG] : train : x - (321, 42), y - (321, 1) | test : x - (81, 42), y - (81, 1)
+2023-01-12 10:04:51 [FDSSupportVectorClassifier][DEBUG] : 
+2023-01-12 10:04:51 [FDSSupportVectorClassifier][DEBUG] : Grid Search CV : SVC
+2023-01-12 10:04:51 [FDSSupportVectorClassifier][DEBUG] : best parameters : {}
+2023-01-12 10:04:51 [FDSSupportVectorClassifier][DEBUG] : best score : 0.8162
+2023-01-12 10:04:51 [FDSSupportVectorClassifier][DEBUG] :    mean_fit_time  std_fit_time  ...  std_test_score  rank_test_score
+0       0.003408      0.000486  ...        0.006065                1
+
+[1 rows x 13 columns]
+2023-01-12 10:04:51 [FDSSupportVectorClassifier][DEBUG] : Confusion Matrix :
+[[68  0]
+ [13  0]]
+2023-01-12 10:04:51 [FDSSupportVectorClassifier][DEBUG] : Accuracy Score : 0.8395061728395061
+2023-01-12 10:04:51 [FDSSupportVectorClassifier][DEBUG] : Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.84      1.00      0.91        68
+           1       0.00      0.00      0.00        13
+
+    accuracy                           0.84        81
+   macro avg       0.42      0.50      0.46        81
+weighted avg       0.70      0.84      0.77        81
+
+2023-01-12 10:04:51 [FDSSupportVectorClassifier][DEBUG] : ROC AUC Score : 0.5
+2023-01-12 10:04:52 [FDSSupportVectorClassifier][DEBUG] : 
+2023-01-12 10:04:52 [FDSSupportVectorClassifier][DEBUG] : mediaGroupName : SB
+2023-01-12 10:04:52 [FDSSupportVectorClassifier][DEBUG] : 학습데이터 분할
+2023-01-12 10:04:52 [FDSSupportVectorClassifier][DEBUG] : train : x - (326, 38), y - (326, 1) | test : x - (82, 38), y - (82, 1)
+2023-01-12 10:04:52 [FDSSupportVectorClassifier][DEBUG] : 
+2023-01-12 10:04:52 [FDSSupportVectorClassifier][DEBUG] : Grid Search CV : SVC
+2023-01-12 10:04:52 [FDSSupportVectorClassifier][DEBUG] : best parameters : {}
+2023-01-12 10:04:52 [FDSSupportVectorClassifier][DEBUG] : best score : 0.85893
+2023-01-12 10:04:52 [FDSSupportVectorClassifier][DEBUG] :    mean_fit_time  std_fit_time  ...  std_test_score  rank_test_score
+0       0.003188      0.000405  ...        0.005221                1
+
+[1 rows x 13 columns]
+2023-01-12 10:04:52 [FDSSupportVectorClassifier][DEBUG] : Confusion Matrix :
+[[68  0]
+ [14  0]]
+2023-01-12 10:04:52 [FDSSupportVectorClassifier][DEBUG] : Accuracy Score : 0.8292682926829268
+2023-01-12 10:04:52 [FDSSupportVectorClassifier][DEBUG] : Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.83      1.00      0.91        68
+           1       0.00      0.00      0.00        14
+
+    accuracy                           0.83        82
+   macro avg       0.41      0.50      0.45        82
+weighted avg       0.69      0.83      0.75        82
+
+2023-01-12 10:04:52 [FDSSupportVectorClassifier][DEBUG] : ROC AUC Score : 0.5

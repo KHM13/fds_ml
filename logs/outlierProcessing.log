@@ -1,0 +1,66 @@
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : mediaGroupName : IB
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : mediaGroupCodeArray : 091, 91
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : Data shape : (402, 43)
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 - q1 : 0.0, q3 : 0.0, median : 0.0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 갯수 : Amount -> 69
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 제거 전 : (402, 43)
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 제거 후 : (333, 43)
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 - q1 : 1000.0, q3 : 50000.0, median : 50000.0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 갯수 : IO_EA_DD1_FTR_LMT3 -> 0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 - q1 : 1000.0, q3 : 10000.0, median : 10000.0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 갯수 : IO_EA_TM1_FTR_LMT3 -> 0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 - q1 : 0.0, q3 : 6.0, median : 0.0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 갯수 : ATTC_DS -> 0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 - q1 : 0.0, q3 : 0.0, median : 0.0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 갯수 : IO_EA_DPZ_PL_IMP_BAC -> 15
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 제거 전 : (333, 43)
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 제거 후 : (318, 43)
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 - q1 : 0.0, q3 : 0.0, median : 0.0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 갯수 : IO_EA_TOT_BAC6 -> 0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 - q1 : 0.0, q3 : 0.0, median : 0.0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 갯수 : IO_EA_RMT_FEE1 -> 0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 - q1 : 1963.0, q3 : 1983.0, median : 1969.0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 갯수 : pc_foresicInfo -> 48
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 제거 전 : (318, 43)
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 제거 후 : (270, 43)
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : mediaGroupName : SB
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : mediaGroupCodeArray : 021, 022, 023, 024, 21, 22, 23, 24
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : Data shape : (408, 39)
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 - q1 : 0.0, q3 : 100000.0, median : 0.0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 갯수 : Amount -> 72
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 제거 전 : (408, 39)
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 제거 후 : (336, 39)
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 - q1 : 1000.0, q3 : 50000.0, median : 30000.0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 갯수 : IO_EA_DD1_FTR_LMT3 -> 0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 - q1 : 1000.0, q3 : 10000.0, median : 10000.0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 갯수 : IO_EA_TM1_FTR_LMT3 -> 0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 - q1 : 0.0, q3 : 6.0, median : 0.0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 갯수 : ATTC_DS -> 0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 - q1 : 0.0, q3 : 0.0, median : 0.0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 갯수 : IO_EA_DPZ_PL_IMP_BAC -> 54
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 제거 전 : (336, 39)
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 제거 후 : (282, 39)
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 - q1 : 0.0, q3 : 0.0, median : 0.0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 갯수 : IO_EA_TOT_BAC6 -> 0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 - q1 : 0.0, q3 : 0.0, median : 0.0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 갯수 : IO_EA_RMT_FEE1 -> 0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 - q1 : 0.0, q3 : 1967.0, median : 0.0
+2023-01-04 11:31:55 [OutlierProcessing][DEBUG] : 이상치 갯수 : pc_foresicInfo -> 0

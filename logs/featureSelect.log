@@ -1,0 +1,101 @@
+2023-01-04 11:31:19 [FeatureSelection][DEBUG] : 
+2023-01-04 11:31:19 [FeatureSelection][DEBUG] : mediaGroupName : IB
+2023-01-04 11:31:19 [FeatureSelection][DEBUG] : mediaGroupCodeArray : 091, 91
+2023-01-04 11:31:19 [FeatureSelection][DEBUG] : Data shape : (402, 43)
+2023-01-04 11:31:19 [FeatureSelection][DEBUG] : 
+2023-01-04 11:31:19 [FeatureSelection][DEBUG] : 변수 선택법 : stepwise
+2023-01-04 11:31:22 [FeatureSelection][DEBUG] : Before Select Columns Size : 43
+2023-01-04 11:31:22 [FeatureSelection][DEBUG] : Best AIC : 38.082820876864275
+2023-01-04 11:31:22 [FeatureSelection][DEBUG] : Selected Columns : 21
+isNewDevice,pc_remoteInfo3,securityMediaType,pc_BwVsnCd,doaddress,pc_foresicInfo,PRE_ASSIGN_YN,IO_EA_DD1_FTR_LMT3,pc_isWinFirewall,EXCEPT_REGIST,SMS_AUTHEN_YN,IO_EA_PW_CD_DS2,pc_HdModel,pc_OsLangCd,pc_RemoteProg,pc_RemotePORT,pc_isCertMisuse,workGbn,NBNK_C,pc_OS_FIREWALL_CD,workType
+2023-01-04 11:31:22 [FeatureSelection][DEBUG] : Best Model Summary : 
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           processState   R-squared:                       0.604
+Model:                            OLS   Adj. R-squared:                  0.584
+Method:                 Least Squares   F-statistic:                     30.62
+Date:                Wed, 04 Jan 2023   Prob (F-statistic):           6.05e-65
+Time:                        11:31:22   Log-Likelihood:                0.95859
+No. Observations:                 402   AIC:                             38.08
+Df Residuals:                     382   BIC:                             118.0
+Df Model:                          19                                         
+Covariance Type:            nonrobust                                         
+======================================================================================
+                         coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+isNewDevice           -0.4925      0.093     -5.307      0.000      -0.675      -0.310
+pc_remoteInfo3         0.9047      0.149      6.074      0.000       0.612       1.198
+securityMediaType      0.5986      0.078      7.711      0.000       0.446       0.751
+pc_BwVsnCd             0.2163      0.046      4.710      0.000       0.126       0.307
+doaddress             -0.1847      0.057     -3.268      0.001      -0.296      -0.074
+pc_foresicInfo        -0.0012      0.000    -10.276      0.000      -0.001      -0.001
+PRE_ASSIGN_YN         -0.2823      0.039     -7.295      0.000      -0.358      -0.206
+IO_EA_DD1_FTR_LMT3  6.715e-06   1.37e-06      4.901      0.000    4.02e-06    9.41e-06
+pc_isWinFirewall       0.6896      0.074      9.352      0.000       0.545       0.835
+EXCEPT_REGIST          1.0208      0.180      5.681      0.000       0.667       1.374
+SMS_AUTHEN_YN         -0.1160      0.043     -2.708      0.007      -0.200      -0.032
+IO_EA_PW_CD_DS2       -0.2437      0.044     -5.579      0.000      -0.330      -0.158
+pc_HdModel             0.0684      0.011      6.277      0.000       0.047       0.090
+pc_OsLangCd            0.2337      0.040      5.815      0.000       0.155       0.313
+pc_RemoteProg         -0.5534      0.221     -2.502      0.013      -0.988      -0.118
+pc_RemotePORT          0.1858      0.116      1.598      0.111      -0.043       0.414
+pc_isCertMisuse        0.0974      0.025      3.835      0.000       0.047       0.147
+workGbn                0.2470      0.107      2.313      0.021       0.037       0.457
+NBNK_C                 0.3667      0.234      1.565      0.119      -0.094       0.827
+pc_OS_FIREWALL_CD     -0.1847      0.057     -3.268      0.001      -0.296      -0.074
+workType               0.2470      0.107      2.313      0.021       0.037       0.457
+const                 -0.0515      0.066     -0.784      0.433      -0.180       0.078
+==============================================================================
+Omnibus:                       12.328   Durbin-Watson:                   2.026
+Prob(Omnibus):                  0.002   Jarque-Bera (JB):               24.725
+Skew:                          -0.049   Prob(JB):                     4.28e-06
+Kurtosis:                       4.211   Cond. No.                     4.46e+20
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 5.55e-30. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+2023-01-04 11:31:22 [FeatureSelection][DEBUG] : 
+2023-01-04 11:31:22 [FeatureSelection][DEBUG] : mediaGroupName : SB
+2023-01-04 11:31:22 [FeatureSelection][DEBUG] : mediaGroupCodeArray : 021, 022, 023, 024, 21, 22, 23, 24
+2023-01-04 11:31:22 [FeatureSelection][DEBUG] : Data shape : (408, 39)
+2023-01-04 11:31:22 [FeatureSelection][DEBUG] : 
+2023-01-04 11:31:22 [FeatureSelection][DEBUG] : 변수 선택법 : stepwise
+2023-01-04 11:31:23 [FeatureSelection][DEBUG] : Before Select Columns Size : 39
+2023-01-04 11:31:23 [FeatureSelection][DEBUG] : Best AIC : 102.79382414388795
+2023-01-04 11:31:23 [FeatureSelection][DEBUG] : Selected Columns : 8
+sm_jailBreak,sm_deviceModel,FTR_DS2,sm_locale,EBNK_MED_DSC,country,E_FNC_USR_DVIC_INF_CNTN,doaddress
+2023-01-04 11:31:23 [FeatureSelection][DEBUG] : Best Model Summary : 
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           processState   R-squared:                       0.425
+Model:                            OLS   Adj. R-squared:                  0.414
+Method:                 Least Squares   F-statistic:                     36.92
+Date:                Wed, 04 Jan 2023   Prob (F-statistic):           1.06e-43
+Time:                        11:31:23   Log-Likelihood:                -42.397
+No. Observations:                 408   AIC:                             102.8
+Df Residuals:                     399   BIC:                             138.9
+Df Model:                           8                                         
+Covariance Type:            nonrobust                                         
+===========================================================================================
+                              coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------
+sm_jailBreak                0.8479      0.103      8.264      0.000       0.646       1.050
+sm_deviceModel             -0.0191      0.005     -3.959      0.000      -0.029      -0.010
+FTR_DS2                     0.5423      0.065      8.289      0.000       0.414       0.671
+sm_locale                  -0.8059      0.112     -7.219      0.000      -1.025      -0.586
+EBNK_MED_DSC                0.5315      0.094      5.667      0.000       0.347       0.716
+country                    -0.1789      0.053     -3.352      0.001      -0.284      -0.074
+E_FNC_USR_DVIC_INF_CNTN    -0.0106      0.005     -2.004      0.046      -0.021      -0.000
+doaddress                   0.0264      0.018      1.437      0.151      -0.010       0.063
+const                       0.0634      0.053      1.186      0.236      -0.042       0.168
+==============================================================================
+Omnibus:                       63.460   Durbin-Watson:                   2.183
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              100.638
+Skew:                           0.958   Prob(JB):                     1.40e-22
+Kurtosis:                       4.500   Cond. No.                         146.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

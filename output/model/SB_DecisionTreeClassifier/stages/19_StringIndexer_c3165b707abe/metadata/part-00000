@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.StringIndexer","timestamp":1698209893210,"sparkVersion":"3.3.0","uid":"StringIndexer_c3165b707abe","paramMap":{"inputCol":"doaddress","handleInvalid":"keep","outputCol":"doaddressIndex"},"defaultParamMap":{"stringOrderType":"frequencyDesc","handleInvalid":"error","outputCol":"StringIndexer_c3165b707abe__output"}}

@@ -1,0 +1,98 @@
+2023-01-12 10:04:49 [FDSLogisticRegression][DEBUG] : 
+2023-01-12 10:04:49 [FDSLogisticRegression][DEBUG] : mediaGroupName : IB
+2023-01-12 10:04:49 [FDSLogisticRegression][DEBUG] : 학습데이터 분할
+2023-01-12 10:04:49 [FDSLogisticRegression][DEBUG] : train : x - (321, 42), y - (321, 1) | test : x - (81, 42), y - (81, 1)
+2023-01-12 10:04:49 [FDSLogisticRegression][DEBUG] : 
+2023-01-12 10:04:49 [FDSLogisticRegression][DEBUG] : Grid Search CV : LogisticRegression
+2023-01-12 10:04:49 [FDSLogisticRegression][DEBUG] : best parameters : {}
+2023-01-12 10:04:49 [FDSLogisticRegression][DEBUG] : best score : 0.89394
+2023-01-12 10:04:49 [FDSLogisticRegression][DEBUG] :    mean_fit_time  std_fit_time  ...  std_test_score  rank_test_score
+0       0.034387         0.003  ...        0.032134                1
+
+[1 rows x 13 columns]
+2023-01-12 10:04:49 [FDSLogisticRegression][DEBUG] : Confusion Matrix :
+[[67  1]
+ [ 4  9]]
+2023-01-12 10:04:49 [FDSLogisticRegression][DEBUG] : Accuracy Score : 0.9382716049382716
+2023-01-12 10:04:49 [FDSLogisticRegression][DEBUG] : Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.94      0.99      0.96        68
+           1       0.90      0.69      0.78        13
+
+    accuracy                           0.94        81
+   macro avg       0.92      0.84      0.87        81
+weighted avg       0.94      0.94      0.93        81
+
+2023-01-12 10:04:49 [FDSLogisticRegression][DEBUG] : ROC AUC Score : 0.8388009049773756
+2023-01-12 10:04:49 [FDSLogisticRegression][DEBUG] : 변수 중요도 Top 20 : 
+EXCEPT_REGIST           1.082407e+00
+pc_BwVsnCd              1.034972e+00
+pc_remoteInfo2          1.034532e+00
+pc_remoteInfo3          8.128810e-01
+workType                6.591590e-01
+workGbn                 6.591590e-01
+pc_isWinFirewall        6.490850e-01
+ATTC_DS                 5.515629e-01
+pc_isVpn                4.325594e-01
+pc_VpnCntryCd           4.325594e-01
+IO_EA_TM1_FTR_LMT3      2.007712e-01
+pc_remoteInfo1          1.976643e-01
+pc_RemoteProg           1.503365e-01
+securityMediaType       1.117120e-01
+pc_HdModel              9.713434e-02
+IO_EA_DD1_FTR_LMT3      4.076583e-02
+pc_foresicInfo          2.417189e-02
+IO_EA_DPZ_PL_IMP_BAC   -6.774267e-07
+isNewAccount           -5.266552e-05
+IO_EA_TOT_BAC6         -2.572261e-03
+dtype: float64
+2023-01-12 10:04:51 [FDSLogisticRegression][DEBUG] : 
+2023-01-12 10:04:51 [FDSLogisticRegression][DEBUG] : mediaGroupName : SB
+2023-01-12 10:04:51 [FDSLogisticRegression][DEBUG] : 학습데이터 분할
+2023-01-12 10:04:51 [FDSLogisticRegression][DEBUG] : train : x - (326, 38), y - (326, 1) | test : x - (82, 38), y - (82, 1)
+2023-01-12 10:04:51 [FDSLogisticRegression][DEBUG] : 
+2023-01-12 10:04:51 [FDSLogisticRegression][DEBUG] : Grid Search CV : LogisticRegression
+2023-01-12 10:04:51 [FDSLogisticRegression][DEBUG] : best parameters : {}
+2023-01-12 10:04:51 [FDSLogisticRegression][DEBUG] : best score : 0.92037
+2023-01-12 10:04:51 [FDSLogisticRegression][DEBUG] :    mean_fit_time  std_fit_time  ...  std_test_score  rank_test_score
+0       0.030987      0.002269  ...        0.025865                1
+
+[1 rows x 13 columns]
+2023-01-12 10:04:51 [FDSLogisticRegression][DEBUG] : Confusion Matrix :
+[[67  1]
+ [ 9  5]]
+2023-01-12 10:04:51 [FDSLogisticRegression][DEBUG] : Accuracy Score : 0.8780487804878049
+2023-01-12 10:04:51 [FDSLogisticRegression][DEBUG] : Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.88      0.99      0.93        68
+           1       0.83      0.36      0.50        14
+
+    accuracy                           0.88        82
+   macro avg       0.86      0.67      0.72        82
+weighted avg       0.87      0.88      0.86        82
+
+2023-01-12 10:04:51 [FDSLogisticRegression][DEBUG] : ROC AUC Score : 0.671218487394958
+2023-01-12 10:04:51 [FDSLogisticRegression][DEBUG] : 변수 중요도 Top 20 : 
+FTR_DS2               2.222677
+E_FNC_USR_ACS_DSC     1.155609
+workGbn               1.118993
+sm_jailBreak          1.080140
+PRE_ASSIGN_YN         0.931881
+E_FNC_USR_OS_DSC      0.898036
+SMS_AUTHEN_YN         0.870834
+EBNK_MED_DSC          0.570989
+sm_service            0.442958
+securityMediaType     0.404620
+IO_EA_DD1_FTR_LMT3    0.195087
+IO_EA_TM1_FTR_LMT3    0.173601
+sm_osVersion          0.102289
+doaddress             0.072833
+RV_AC_DGN_YN2         0.064459
+sm_locale             0.041436
+workType              0.018412
+sm_deviceModel        0.004745
+COPR_DS               0.000003
+IO_EA_RMT_FEE1       -0.015828
+dtype: float64

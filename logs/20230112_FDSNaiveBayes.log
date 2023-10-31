@@ -1,0 +1,54 @@
+2023-01-12 10:04:51 [FDSNaiveBayes][DEBUG] : 
+2023-01-12 10:04:51 [FDSNaiveBayes][DEBUG] : mediaGroupName : IB
+2023-01-12 10:04:51 [FDSNaiveBayes][DEBUG] : 학습데이터 분할
+2023-01-12 10:04:51 [FDSNaiveBayes][DEBUG] : train : x - (321, 42), y - (321, 1) | test : x - (81, 42), y - (81, 1)
+2023-01-12 10:04:51 [FDSNaiveBayes][DEBUG] : 
+2023-01-12 10:04:51 [FDSNaiveBayes][DEBUG] : Grid Search CV : BernoulliNB
+2023-01-12 10:04:51 [FDSNaiveBayes][DEBUG] : best parameters : {}
+2023-01-12 10:04:51 [FDSNaiveBayes][DEBUG] : best score : 0.64163
+2023-01-12 10:04:51 [FDSNaiveBayes][DEBUG] :    mean_fit_time  std_fit_time  ...  std_test_score  rank_test_score
+0       0.002191      0.000397  ...        0.036561                1
+
+[1 rows x 13 columns]
+2023-01-12 10:04:51 [FDSNaiveBayes][DEBUG] : Confusion Matrix :
+[[40 28]
+ [ 4  9]]
+2023-01-12 10:04:51 [FDSNaiveBayes][DEBUG] : Accuracy Score : 0.6049382716049383
+2023-01-12 10:04:51 [FDSNaiveBayes][DEBUG] : Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.91      0.59      0.71        68
+           1       0.24      0.69      0.36        13
+
+    accuracy                           0.60        81
+   macro avg       0.58      0.64      0.54        81
+weighted avg       0.80      0.60      0.66        81
+
+2023-01-12 10:04:51 [FDSNaiveBayes][DEBUG] : ROC AUC Score : 0.6402714932126696
+2023-01-12 10:04:52 [FDSNaiveBayes][DEBUG] : 
+2023-01-12 10:04:52 [FDSNaiveBayes][DEBUG] : mediaGroupName : SB
+2023-01-12 10:04:52 [FDSNaiveBayes][DEBUG] : 학습데이터 분할
+2023-01-12 10:04:52 [FDSNaiveBayes][DEBUG] : train : x - (326, 38), y - (326, 1) | test : x - (82, 38), y - (82, 1)
+2023-01-12 10:04:52 [FDSNaiveBayes][DEBUG] : 
+2023-01-12 10:04:52 [FDSNaiveBayes][DEBUG] : Grid Search CV : BernoulliNB
+2023-01-12 10:04:52 [FDSNaiveBayes][DEBUG] : best parameters : {}
+2023-01-12 10:04:52 [FDSNaiveBayes][DEBUG] : best score : 0.74238
+2023-01-12 10:04:52 [FDSNaiveBayes][DEBUG] :    mean_fit_time  std_fit_time  ...  std_test_score  rank_test_score
+0       0.002608      0.000785  ...         0.03654                1
+
+[1 rows x 13 columns]
+2023-01-12 10:04:52 [FDSNaiveBayes][DEBUG] : Confusion Matrix :
+[[54 14]
+ [ 8  6]]
+2023-01-12 10:04:52 [FDSNaiveBayes][DEBUG] : Accuracy Score : 0.7317073170731707
+2023-01-12 10:04:52 [FDSNaiveBayes][DEBUG] : Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.87      0.79      0.83        68
+           1       0.30      0.43      0.35        14
+
+    accuracy                           0.73        82
+   macro avg       0.59      0.61      0.59        82
+weighted avg       0.77      0.73      0.75        82
+
+2023-01-12 10:04:52 [FDSNaiveBayes][DEBUG] : ROC AUC Score : 0.6113445378151261

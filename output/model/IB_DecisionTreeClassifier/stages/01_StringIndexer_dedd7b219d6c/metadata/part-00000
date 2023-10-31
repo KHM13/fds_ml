@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.StringIndexer","timestamp":1698209724937,"sparkVersion":"3.3.0","uid":"StringIndexer_dedd7b219d6c","paramMap":{"outputCol":"NBNK_CIndex","handleInvalid":"keep","inputCol":"NBNK_C"},"defaultParamMap":{"handleInvalid":"error","outputCol":"StringIndexer_dedd7b219d6c__output","stringOrderType":"frequencyDesc"}}
