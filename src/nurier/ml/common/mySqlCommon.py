@@ -1,18 +1,23 @@
 import pymysql
-
+from src.nurier.ml.common.CommonProperties import CommonProperties as prop
 
 
 class mysqlCommon:
     __result = []
 
-    def excute_query(self, a: str):
-        # TO_DO 프로퍼티에서 가져오기
-        conn = pymysql.connect(host='localhost', user='root', password='password', charset='utf8')
+    def excute_query(self, mlmodel_id: str):
+        conn = pymysql.connect(host=prop().get_MYSQL_host(),
+                               port=int(prop().get_MYSQL_port()),
+                               user=prop().get_MYSQL_user(),
+                               password=prop().get_MYSQL_pass(),
+                               database=prop().get_MYSQL_database(),
+                               charset='utf8')
         cursor = conn.cursor()
-        sql = "SELECT * FROM TEST WHERE TESTTT = %s"
-        cursor.execute(sql, a)
+        sql = "SELECT * FROM preprocess_process where mlmodel_id =" + mlmodel_id
+        cursor.execute(sql)
         result = cursor.fetchall()
         for data in result:
+            print(data)
             self.__result.append(data)
         conn.commit()
         conn.close()

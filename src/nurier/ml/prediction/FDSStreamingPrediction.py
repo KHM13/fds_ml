@@ -13,11 +13,11 @@ class FDSStreamingPrediction:
     def __init__(self):
         self.__pred = FDSPrediction()
         FDSStreamingPrediction.__instance = self
-        """
         mysql = mysqlCommon()
-        mysql.excute_query("table_name")
+        #TO_DO 이거 우짤껀지
+        mysql.excute_query("1")
         self.__preList = mysql.get_result()
-        """
+
     @staticmethod
     def getInstance():
         if FDSStreamingPrediction.__instance is None:
@@ -36,7 +36,7 @@ class FDSStreamingPrediction:
         # df(Spark df) => pd_df => preprocess(sklearn, ...) => Spark df
         ###############################################################
 
-        cp = False
+        cp = True
 
         test = [["1", "TR_DTM", "except", "", "", ""],
                 ["2", "indexName", "missing", "input", "0", ""],

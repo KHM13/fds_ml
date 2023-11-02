@@ -19,6 +19,7 @@ class CommonProperties:
     listener: SectionProxy = {}
     redis: SectionProxy = {}
     scheduler: SectionProxy = {}
+    mysql: SectionProxy = {}
     isServerRunning = False
     isOperationServer = False
 
@@ -46,6 +47,7 @@ class CommonProperties:
         self.sender = properties['SENDER']
         self.redis = properties['REDIS']
         self.scheduler = properties['SCHEDULER']
+        self.mysql = properties['MYSQL']
 
         self.isOperationServer = True if self.server.get('server.type') == 'operation' else False
 
@@ -311,6 +313,21 @@ class CommonProperties:
 
     def get_prediction_schedule_datarow_max(self) -> int:
         return self.scheduler.getint('worker.FDSPredictionSchedule.dataRow.max')
+
+    def get_MYSQL_user(self) -> str:
+        return self.mysql.get("mysql.user")
+
+    def get_MYSQL_pass(self) -> str:
+        return self.mysql.get("mysql.pass")
+
+    def get_MYSQL_host(self) -> str:
+        return self.mysql.get("mysql.host")
+
+    def get_MYSQL_database(self) -> str:
+        return self.mysql.get("mysql.database")
+
+    def get_MYSQL_port(self) -> int:
+        return self.mysql.get("mysql.port")
 
     def set_spark_app_name(self, app_name):
         self.spark_app_name = app_name
