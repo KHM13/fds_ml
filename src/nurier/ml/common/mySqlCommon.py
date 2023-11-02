@@ -17,7 +17,6 @@ class mysqlCommon:
         cursor.execute(sql)
         result = cursor.fetchall()
         for data in result:
-            print(data)
             self.__result.append(data)
         conn.commit()
         conn.close()

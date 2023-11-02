@@ -7,7 +7,7 @@ from pyspark.sql.dataframe import DataFrame
 
 class FDSStreamingPrediction:
     __pred: FDSPrediction
-    __preList: list
+    __preList: list = []
     __instance = None
 
     def __init__(self):
@@ -36,21 +36,12 @@ class FDSStreamingPrediction:
         # df(Spark df) => pd_df => preprocess(sklearn, ...) => Spark df
         ###############################################################
 
-        cp = True
 
-        test = [["1", "TR_DTM", "except", "", "", ""],
-                ["2", "indexName", "missing", "input", "0", ""],
-                ["2", "documentTypeName", "missing", "input", "0", ""],
-                ["2", "COPR_DS", "missing", "input", "0", ""],
-                ["2", "LANG_DS", "missing", "input", "0", ""],
-                ["2", "E_FNC_USR_OS_DSC", "missing", "input", "0", ""],
-                ["2", "E_FNC_LGIN_DSC", "missing", "input", "0", ""],
-                ["2", "NBNK_C", "missing", "input", "0", ""]]
+        preList = FDSStreamingPrediction.__preList
+        pd_df = df.toPandas()
 
-        if cp:
-            preList = FDSStreamingPrediction.__preList
-            pd_df = df.toPandas()
-            df = predictDataPreprocessing.preprocess(pd_df, preList)
+        # 정답지 압수
+        df = predictDataPreprocessing.preprocess(pd_df, preList)
 
         df.cache()
         # 인뱅 스뱅 분할
@@ -74,9 +65,11 @@ class FDSStreamingPrediction:
             # row_list = [ib_kafka_df]
             ib_model = ib_model.result_prediction(ib_kafka_df)
             print("ib_kafka_df: ", ib_model.show())
+            print("ib_kafka_df: ", ib_model.count())
             # UpdatePrediction.getInstance().process(row_list, ib_model)
         if sb_ch:
             # row_list = [sb_kafka_df]
             sb_model = sb_model.result_prediction(sb_kafka_df)
             print("sb_kafka_df: ", sb_model.show())
+            print("sb_kafka_df: ", sb_model.count())
             # UpdatePrediction.getInstance().process(row_list, sb_model)

@@ -46,6 +46,7 @@ if __name__ == '__main__':
         "kafka.security.protocol": "PLAINTEXT",
         "group.id": "hi",
         "startingOffsets": "earliest",
+        "maxOffsetsPerTrigger": 100
     }
 
     #####################################
