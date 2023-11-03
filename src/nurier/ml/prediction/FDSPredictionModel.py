@@ -8,7 +8,7 @@ from multipledispatch import dispatch
 import time
 
 from pyspark.ml import PipelineModel, Pipeline
-from pyspark.sql.dataframe import DataFrame, StructType, StructField
+from pyspark.sql.dataframe import DataFrame
 from pyspark.ml.classification import LogisticRegression, LinearSVC, RandomForestClassifier, MultilayerPerceptronClassifier,\
     GBTClassifier, DecisionTreeClassifier, OneVsRest, NaiveBayes
 from pyspark.ml.regression import LinearRegression

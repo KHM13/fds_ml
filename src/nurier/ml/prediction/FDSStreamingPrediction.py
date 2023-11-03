@@ -14,7 +14,7 @@ class FDSStreamingPrediction:
         self.__pred = FDSPrediction()
         FDSStreamingPrediction.__instance = self
         mysql = mysqlCommon()
-        #TO_DO 이거 우짤껀지
+        # TO_DO 수정 필요
         mysql.excute_query("1")
         self.__preList = mysql.get_result()
 

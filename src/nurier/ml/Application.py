@@ -1,15 +1,10 @@
-from src.nurier.ml.common.CommonProperties import CommonProperties as prop
-from src.nurier.ml.data.DataStructType import ML_Field
-from src.nurier.ml.prediction.FDSPrediction import FDSPrediction
 from src.nurier.ml.prediction.FDSStreamingPrediction import FDSStreamingPrediction
-from src.nurier.ml.work.UpdatePrediction import UpdatePrediction
-from pyspark.sql.dataframe import DataFrame
-from pyspark.sql.functions import from_json
+from src.nurier.ml.common.CommonProperties import CommonProperties as prop
 from src.nurier.ml.common.SparkCommon import SparkCommon as scommon
+from src.nurier.ml.data.DataStructType import ML_Field
+from pyspark.sql.functions import from_json
 from pyspark.sql import SparkSession
-import predictDataPreprocessing
 import findspark
-from src.nurier.ml.common.mySqlCommon import mysqlCommon as mycommon
 
 
 import os
