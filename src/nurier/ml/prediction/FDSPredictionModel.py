@@ -1,3 +1,5 @@
+from pyspark.sql.types import StructType, StructField
+
 from src.nurier.ml.common.CommonProperties import CommonProperties as prop
 from src.nurier.ml.data.DataStructType import ML_Field
 from src.nurier.ml.data.DataObject import DataObject
